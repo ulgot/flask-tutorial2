@@ -1,0 +1,27 @@
+{% extends 'base3.html' %}
+
+{% block title %}
+Zadania
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h1>Zmień zadanie</h1>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+<div class="row">
+     <div class="col-md-8">
+        <form class="form-inline" action="/update/{{zadanie.id}}" method="POST">
+            <div class="form-group">
+                <label for="zadanie">Zadanie</label>
+                <input type="text" class="form-control" name="zadanie" id="zadanie" placeholder="{{zadanie.zadanie}}">
+                <input type="text" class="form-control" name="priorytet" id="priorytet" placeholder="{{zadanie.priorytet}}">
+            </div>
+            <button type="submit" class="btn btn-primary">Zmień</button>
+        </form>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+{% endblock %}

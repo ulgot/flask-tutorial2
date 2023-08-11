@@ -1,0 +1,35 @@
+{% extends 'base3.html' %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h1>Zaloguj / Wyloguj</h1>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+<div class="row">
+     <div class="col-md-8">
+        {% if logged_user == '' %}
+        <form class="form-inline" action="/login" method="POST">
+            <div class="form-group">
+                <label for="login">Login</label>
+                <input type="text" class="form-control" name="uname" id="uname" placeholder="username">
+            </div>
+            <button type="submit" value="login" class="btn btn-primary">Zaloguj</button>
+        </form>
+        {% else %}
+        <form class="form-inline" action="/login" method="POST">
+            <div class="form-group">
+                <label for="login">{{ logged_user }}</label>
+            </div>
+            <button type="submit" value="logout" class="btn btn-primary">Wyloguj</button>
+        </form>
+        {% endif %}
+    </div>
+    <div class="col-md-4"></div>
+</div>
+{% endblock %}

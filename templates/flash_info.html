@@ -1,0 +1,10 @@
+{% extends 'base3.html' %}
+
+{% block title %}
+Zadania
+{% endblock %}
+
+{% block content %}
+<p class="text-danger">{{ msg }}</p>
+<p><a href={{ url_for(backurl) }}>wróć</a></p>
+{% endblock %}

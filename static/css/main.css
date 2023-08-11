@@ -1,0 +1,8 @@
+body {
+    font-family: sans-serif;
+    color: darkslategray;
+}
+
+h1 {
+    font-variant: discretionary-ligatures small-caps oldstyle-nums tabular-nums;
+}
